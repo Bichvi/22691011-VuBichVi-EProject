@@ -76,14 +76,14 @@ jobs:
 
       - name: Push images to Docker Hub
         run: |
-          docker tag ecommerce-auth:latest ${{ secrets.DOCKER_USERNAME }}/22691011-vubichvi-eproject:auth-latest
+          docker tag 22691011-vubichvi-eproject-auth:latest ${{ secrets.DOCKER_USERNAME }}/22691011-vubichvi-eproject:auth-latest
           docker push ${{ secrets.DOCKER_USERNAME }}/22691011-vubichvi-eproject:auth-latest
 
-          docker tag ecommerce-product:latest ${{ secrets.DOCKER_USERNAME }}/22691011-vubichvi-eproject:product-latest
+          docker tag 22691011-vubichvi-eproject-product:latest ${{ secrets.DOCKER_USERNAME }}/22691011-vubichvi-eproject:product-latest
           docker push ${{ secrets.DOCKER_USERNAME }}/22691011-vubichvi-eproject:product-latest
 
-          docker tag ecommerce-order:latest ${{ secrets.DOCKER_USERNAME }}/22691011-vubichvi-eproject:order-latest
+          docker tag 22691011-vubichvi-eproject-order:latest ${{ secrets.DOCKER_USERNAME }}/22691011-vubichvi-eproject:order-latest
           docker push ${{ secrets.DOCKER_USERNAME }}/22691011-vubichvi-eproject:order-latest
 
-          docker tag ecommerce-api-gateway:latest ${{ secrets.DOCKER_USERNAME }}/22691011-vubichvi-eproject:api-gateway-latest
+          docker tag 22691011-vubichvi-eproject-api-gateway:latest ${{ secrets.DOCKER_USERNAME }}/22691011-vubichvi-eproject:api-gateway-latest
           docker push ${{ secrets.DOCKER_USERNAME }}/22691011-vubichvi-eproject:api-gateway-latest
