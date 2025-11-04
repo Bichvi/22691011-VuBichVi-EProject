@@ -96,10 +96,10 @@ class ProductController {
   }
 
   // //code lấy theo id_product
-  // async getProductById(req, res, next) {
-  //   const product = await Product.findById(req.params.id);
-  //   res.status(200).json(product);
-  // }
+  async getProductById(req, res, next) {
+    const product = await Product.findById(req.params.id);
+    res.status(200).json(product);
+  }
 
 
   async getProducts(req, res, next) {
