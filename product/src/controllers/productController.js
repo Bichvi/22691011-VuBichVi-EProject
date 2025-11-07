@@ -111,6 +111,11 @@ class ProductController {
   //   const p = await Product.findById(req.params.id);
   //   res.status(200).json(p);
   // }
+// async getPid(req, res){
+//   const p = await Product.findById(req.params.id);
+//   res.status(200).json(p);
+// }
+
 async getPid(req, res){
   const p = await Product.findById(req.params.id);
   res.status(200).json(p);
