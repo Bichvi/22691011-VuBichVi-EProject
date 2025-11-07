@@ -100,11 +100,17 @@ class ProductController {
   //   const product = await Product.findById(req.params.id);
   //   res.status(200).json(product);
   // }
-  async getProductsid(req, res,next){
-    const p = await Product.findById(req.params.id)
+  // async getProductsid(req, res,next){
+  //   const p = await Product.findById(req.params.id)
+  //   res.status(200).json(p);
+  // }
+
+
+
+  async getP_ID(req, res){
+    const p = await Product.findById(req.params.id);
     res.status(200).json(p);
   }
-
 
   async getProducts(req, res, next) {
     try {
