@@ -10,6 +10,9 @@ router.post("/buy", isAuthenticated, productController.createOrder);
 router.get("/", isAuthenticated, productController.getProducts);
 router.get("/:id", isAuthenticated, productController.getID);
 
+
+// router.get("/:id", isAuthenticated, productController.getID);
+
 // router.get("/:id", isAuthenticated, productController.getPID);
 
 
