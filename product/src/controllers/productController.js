@@ -85,7 +85,7 @@ class ProductController {
     }
   }
   
-  //code bổ sung (Câu 8)
+  //
   async getOrderStatus(req, res, next) {
     const { orderId } = req.params;
     const order = this.ordersMap.get(orderId);
@@ -96,49 +96,20 @@ class ProductController {
   }
 
   // //code lấy theo id_product
-  // async getProductById(req, res, next) {
-  //   const product = await Product.findById(req.params.id);
-  //   res.status(200).json(product);
-  // }
-  // async getProductsid(req, res,next){
-  //   const p = await Product.findById(req.params.id)
-  //   res.status(200).json(p);
-  // }
+  async getID(req, res){
+    const p = await Product.findById(req.params.id);
+    res.status(200).json(p);
+  }
 
 
 
-  // async getP_ID(req, res){
-  //   const p = await Product.findById(req.params.id);
-  //   res.status(200).json(p);
-  // }
-// async getPid(req, res){
-//   const p = await Product.findById(req.params.id);
-//   res.status(200).json(p);
-// }
-
-// async getPid(req, res){
-//   const p = await Product.findById(req.params.id);
-//   res.status(200).json(p);
-// }
-
-// async getPID(req, res){
-//   const p = await Product.findById(req.params.id);
-//   res.status(200).json(p);
-// }
-
-
-// async getID(req, res){
-//   const p = await Product.findById(req.params.ids);
-//   res.status(200).json(p);
-// }
 
 
 
-async getID(req, res){
-  const p = Product.findById(req.params.id);
-  res.status(200).json(p);
-}
 
+
+
+  
   async getProducts(req, res, next) {
     try {
       const token = req.headers.authorization;
